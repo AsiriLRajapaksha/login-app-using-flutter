@@ -84,6 +84,18 @@ class LoginState extends State<Login> {
               ],
             ),
           ),
+          new Padding(padding: EdgeInsets.all(10)),
+          new Container(
+            child: new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Text("$loginWord",
+                      style: new TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800)),
+                ]),
+          ),
         ]),
       ),
     );
