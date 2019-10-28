@@ -50,6 +50,37 @@ class LoginState extends State<Login> {
                   ),
                   obscureText: true,
                 ),
+                new Padding(padding: new EdgeInsets.all(8)),
+                new Center(
+                  child: new Row(
+                    children: <Widget>[
+                      new Container(
+                        margin: const EdgeInsets.only(left: 38.0),
+                        child: new RaisedButton(
+                          onPressed: ()=>{},
+                          color: Colors.red,
+                          child: new Text(
+                            "Login",
+                            style: new TextStyle(
+                                color: Colors.white, fontSize: 17.0),
+                          ),
+                        ),
+                      ),
+                      new Container(
+                        margin: const EdgeInsets.only(left: 138.0),
+                        child: new RaisedButton(
+                          onPressed: ()=>{},
+                          color: Colors.red,
+                          child: new Text(
+                            "Clear",
+                            style: new TextStyle(
+                                color: Colors.white, fontSize: 17.0),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
