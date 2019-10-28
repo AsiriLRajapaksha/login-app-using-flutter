@@ -14,6 +14,14 @@ class Login extends StatefulWidget {
 class LoginState extends State<Login> {
   String loginWord = "";
 
+  void _erase() {
+    setState(() {
+      _userController.clear();
+      _paswordController.clear();
+      loginWord = "";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -57,7 +65,7 @@ class LoginState extends State<Login> {
                       new Container(
                         margin: const EdgeInsets.only(left: 38.0),
                         child: new RaisedButton(
-                          onPressed: ()=>{},
+                          onPressed: loginConfirm,
                           color: Colors.red,
                           child: new Text(
                             "Login",
@@ -69,7 +77,7 @@ class LoginState extends State<Login> {
                       new Container(
                         margin: const EdgeInsets.only(left: 138.0),
                         child: new RaisedButton(
-                          onPressed: ()=>{},
+                          onPressed: _erase,
                           color: Colors.red,
                           child: new Text(
                             "Clear",
@@ -100,5 +108,12 @@ class LoginState extends State<Login> {
       ),
     );
 
+  }
+  void loginConfirm() {
+    setState(() {
+      if(_userController.text.isNotEmpty && _paswordController.text.isNotEmpty){
+        loginWord = "Welcome , ${_userController.text}";
+      }
+    });
   }
 }
